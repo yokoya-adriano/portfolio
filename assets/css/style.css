@@ -1,9 +1,57 @@
 /* General
     ============================================================== */
-html {
-    font-size: 14px;
-    line-height: 20px;
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Mohave';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Mohave Regular'), local('OpenSans-Bold'), url(../font/Mohave-Regular.woff2) format('woff2');
 }
+
+@font-face {
+    font-family: 'Mohave';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Mohave Bold'), local('Mohave-Bold'), url(../font/Mohave-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto Regular'), local('OpenSans-Bold'), url(../font/Roboto-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Roboto Bold'), local('Mohave-Bold'), url(../font/Roboto-Bold.woff2) format('woff2');
+}
+
+:root {
+    --primary-color: #012e67;
+    --primary-color-rgb: 1, 46, 103;
+    --secondary-color: #9cacbf;
+    --secondary-color-rgb: 156, 172, 191;
+    --terciary-color: #2b6684;
+    --terciary-color-rgb: 43, 102, 132;
+}
+
+html {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Roboto', sans-serif;
+    color: #0a1417;
+}
+
+
 
 
 /* Header
@@ -13,21 +61,61 @@ html {
     height: 90px;
     display: flex;
     padding: 0px 30px;
-    background-color: #012e67;
+    background-color: var(--primary-color);
     justify-content: space-between;
     align-items: center;
 }
 
-.header__links {
+.header__menu {
     width: 100%;
     height: auto;
-    max-width: 540px;
+    max-width: 690px;
     display: flex;
-    color: #9cacbf;
-    font-size: 1.15rem;
+    color: var(--secondary-color);
+    font-size: 1rem;
     justify-content: space-between;
 }
 
-.header__link {
+.header__links {
     text-transform: uppercase;
+    font-family: 'Mohave';
+    font-weight: 700;
+}
+
+.header__button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 20px;
+  display: inline-block;
+}
+
+#header__shape {
+  stroke-width: 5px;
+  fill: transparent;
+  stroke: var(--terciary-color);
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+
+#header__text {
+  margin-top: -35px;
+  text-align: center;
+}
+
+.header__button #header__text span { 
+    color: var(--terciary-color);
+    transition: 1s all;
+}
+
+.header__button:hover #header__shape {
+  stroke-dasharray: 75 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 100;
+  stroke: var(--secondary-color);
+}
+
+.header__button:hover #header__text span { 
+    color: var(--secondary-color); 
 }
