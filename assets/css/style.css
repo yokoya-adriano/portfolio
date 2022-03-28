@@ -36,12 +36,12 @@
 }
 
 :root {
-    --primary-color: #012e67;
-    --primary-color-rgb: 1, 46, 103;
-    --secondary-color: #9cacbf;
-    --secondary-color-rgb: 156, 172, 191;
-    --terciary-color: #2b6684;
-    --terciary-color-rgb: 43, 102, 132;
+    --primary-color: #000028 ;
+    --primary-color-rgb: 0, 0, 40;
+    --secondary-color: #ff2a6d;
+    --secondary-color-rgb: 255, 42, 109;
+    --terciary-color: #005678;
+    --terciary-color-rgb: 0, 86, 120;
 }
 
 html {
@@ -50,9 +50,6 @@ html {
     font-family: 'Roboto', sans-serif;
     color: #0a1417;
 }
-
-
-
 
 /* Header
     ============================================================== */
@@ -119,3 +116,101 @@ html {
 .header__button:hover #header__text span { 
     color: var(--secondary-color); 
 }
+
+/* Who
+    ============================================================== */
+.who__top {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background: url(../img/who-bg.png) top center repeat;
+}
+
+.who__description {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.who__title {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Mohave';
+    font-size: 3.5rem;
+    display: inline-block;
+}
+
+.who__subtitle {
+    margin-top: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.who__btn{
+    width: 100%;
+    height: 40px;
+    max-width: 260px;
+    margin-top: 3rem;
+    position: relative;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 0px;
+    line-height: 40px;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Mohave';
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.who__btn:hover {
+    transition-duration: 0.1s;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.who__btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px var(--secondary-color);
+}
+
+.who__btn:active:after {
+    box-shadow: 0 0 0 0 var(--secondary-color);
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.who__btn:active {
+    top: 1px;
+}
+
+
+
+
+
