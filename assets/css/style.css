@@ -123,6 +123,7 @@ html {
     width: 100%;
     height: 500px;
     display: flex;
+    align-items: center;
     background: url(../img/who-bg.png) top center repeat;
 }
 
@@ -134,15 +135,22 @@ html {
     flex-direction: column;
 }
 
+.who__title-link {
+    width: 100%;
+    height: auto;
+    max-width: 385px;
+}
+
 .who__title {
-    width: auto;
+    width: 100%;
     height: auto;
     padding: 1rem;
+    display: inline-block;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-family: 'Mohave';
+    text-align: center;
     font-size: 3.5rem;
-    display: inline-block;
 }
 
 .who__subtitle {
@@ -212,5 +220,29 @@ html {
 
 
 
+/*  ==============================================================
+    Breakpoint xl <= 1200px
+    ============================================================== */
+
+@media (max-width: 1200px) {}
 
 
+/*  ==============================================================
+    Breakpoint xl <= 992 px
+    ============================================================== */
+
+@media (max-width: 992px) {}
+
+
+/*  ==============================================================
+    Breakpoint xl <= 768 px
+    ============================================================== */
+
+@media (max-width: 768px) {}
+
+
+/*  ==============================================================
+    Breakpoint xl <= 576 px
+    ============================================================== */
+
+@media (max-width: 576px) {}
